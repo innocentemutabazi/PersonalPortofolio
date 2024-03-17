@@ -7,6 +7,9 @@ module.exports = {
         agrandir: ['Agrandir'],
         hatton: ['Hatton'],
         hattonMedium: ['Hatton Medium'],
+        pop: ['Poppins'],
+        mercy: ['Mercy Christole'],
+        blantick: ['Blantick Script']
       }
     },
   },
