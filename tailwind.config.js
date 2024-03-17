@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        agrandir: ['Agrandir']
+        agrandir: ['Agrandir'],
+        hatton: ['Hatton'],
+        hattonMedium: ['Hatton Medium'],
       }
     },
   },
