@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./indexfolder*/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        agrandir: ['Agrandir']
+      }
+    },
   },
   plugins: [],
 }
