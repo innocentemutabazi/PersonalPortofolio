@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -15,50 +15,52 @@
   <link href="../src/output.css" rel="stylesheet">
 </head>
 
-<body class=" text-[#FEFAE0]">
+<body class="text-[#FEFAE0]">
   <video id="video-background" autoplay loop muted
-    class="fixed right-0 bottom-0 min-w-full min-h-full w-auto h-auto z-0 object-cover">
+    class="fixed right-0 bottom-0 min-w-full min-h-full w-auto h-auto -z-[1] object-cover">
     <source src="1095303825-preview_1710524380337.mp4" type="video/mp4">
   </video>
-  <header class="flex justify-between items-center py-4 px-6 bg-transparent z-10">
+
+  <header class="flex justify-between items-center py-4 px-6 fixed w-full z-[100] transition duration-300 ease-in-out text-[#FEFAE0]" id="header">
     <a href="#home">
-      <h1 class="font-hattonMedium font-bold text-[40px] -mt-3 fixed">MI</h1>
+      <h1 class="font-hattonMedium font-bold text-[40px]">MI</h1>
     </a>
-    <nav class="flex space-x-9 uppercase font-bold my-3 font-agrandir z-20 fixed ml-[58%] mt-7">
+    <nav class="myNav" id="myNav">
+      <span class="absolute md:hidden top-[10px] right-[10px] text-[26px] text-[#272727]" onclick="hideNav()">
+        <i class="fa-solid fa-xmark"></i>
+      </span>
       <a href="#about"
-        class=" tracking-[2px] transition-all duration-300 mt-5 hover:ease-linear  hover:text-[#bba798] hover:bg-[#FEFAE0] hover:border-[3px] hover:border-[#FEFAE0] hover:px-11 hover:mt-5 hover:py-2 hover:rounded-full">About
+        class="tracking-[2px] text-[13px] text-[#272727] md:text-inherit md:text-[15px] hover:ease-linear rounded-[5px] py-[10px] px-[25px] hover:text-[#736051] hover:bg-[#FEFAE0]">About
         Me</a>
       <a href="#skills"
-        class="tracking-[2px] transition-all duration-300 mt-5 hover:ease-linear  hover:text-[#bba798] hover:bg-[#FEFAE0] hover:border-[3px] hover:border-[#FEFAE0] hover:px-11 hover:mt-5 hover:py-2 hover:rounded-full">Skills</a>
+        class="tracking-[2px] text-[13px] text-[#272727] md:text-inherit md:text-[15px] hover:ease-linear rounded-[5px] py-[10px] px-[25px] hover:text-[#736051] hover:bg-[#FEFAE0]">Skills</a>
       <a href="#projects"
-        class="tracking-[2px] transition-all duration-300 mt-5 hover:ease-linear hover:text-[#bba798] hover:bg-[#FEFAE0] hover:border-[3px] hover:border-[#FEFAE0] hover:px-11 hover:mt-5 hover:py-2 hover:rounded-full">Projects</a>
+        class="tracking-[2px] text-[13px] text-[#272727] md:text-inherit md:text-[15px] hover:ease-linear rounded-[5px] py-[10px] px-[25px] hover:text-[#736051] hover:bg-[#FEFAE0]">Projects</a>
       <a href="#contact"
-        class=" tracking-[2px] transition-all duration-300 mt-5 hover:ease-linear hover:text-[#bba798] hover:bg-[#FEFAE0] hover:border-[3px] hover:border-[#FEFAE0] hover:px-11 hover:mt-5 hover:py-2 hover:rounded-full">Get
+        class=" tracking-[2px] text-[13px] text-[#272727] md:text-inherit md:text-[15px] hover:ease-linear rounded-[5px] py-[10px] px-[25px] hover:text-[#736051] hover:bg-[#FEFAE0]">Get
         In Touch</a>
     </nav>
+    <span class="text-[20px] md:hidden flex" onclick="showNav()">
+      <i class="fa-solid fa-bars"></i>
+    </span>
   </header>
-  <main class=" py-2 z-10 relative pb-44 pt-24" id="home">
+
+  <main class="z-10 relative pb-[190px] pt-[240px]" id="home">
     <section>
-      <div class="grid grid-rows-2 ml-16">
-        <div>
-          <h2 class="text-[170px] font-agrandir  font-extrabold">Hi,</h2>
-        </div>
-        <div>
-          <p class="tracking-wide text-[160px] font-agrandir font-bold">I<span class="font-blantick">'</span>m Innocente
-          </p>
-        </div>
-      </div>
+      <h2 class="text-[30px] sm:text-[50px] md:text-[60px] font-agrandir text-center font-extrabold mb-4">Hi, I'm Innocente</h2>
+      <p class="text-[18px] sm:text-[20px] md:text-[25px] text-center text-[#FEFAE0] w-[95%] sm:w-[85%] md:w-[65%] mb-[15px] mx-auto font-semibold">Your partner for software solutions, coding expertise, and website development. Let's bring your ideas to life.</p>
+      <!-- <div class="grid grid-rows-2 ml-16 justify-center">
+      </div> -->
     </section>
-    <a href="#contact"><button
-        class="rounded-full text-[13px] border-[3px] uppercase px-11 py-3 font-bold border-[#FEFAE0] ml-[45%] hover:text-[#bba798] hover:bg-[#FEFAE0] hover:px-14 hover:py-4 transition-all duration-300 hover:ease-in-out">Contact
-        Me</button></a>
+    <a href="#contact" class="rounded-full text-[13px] border-[3px] uppercase px-11 py-3 font-bold border-[#FEFAE0] flex mx-auto w-fit hover:text-[#bba798] hover:bg-[#FEFAE0] transition-all duration-300">Contact Me</a>
   </main>
-  <div class="grid grid-cols-2">
-    <div class="flex justify-center" id="about">
-      <div class="relative flex justify-center align-middle w-3/5">
-        <img src="image1.png" class="absolute rounded-[40px] h-[95%] shadow-2xl">
-        <div class="relative z-10 bg-opacity-5 py-14 text-justify w-[75%] h-[90%]">
-          <p class=" font-agrandir font-bold text-[#FEFAE0] text-[21px] -ml-4">
+  
+  <div class="flex bg-[#ddd] pt-[145px] pb-[70px] flex-col sm:flex-row   px-[3%] sm:px-[2%] md:px-[5%] gap-y-[25px] mx-auto items-center" id="about">
+    <div class="flex justify-center sm:w-1/2">
+      <div class="relative flex justify-center align-middle z-[1] rounded-[10px] overflow-hidden px-[30px] py-[35px] h-fit">
+        <img src="image1.png" class="absolute w-full h-full top-0 left-0 -z-[1]">
+        <div class="relative z-10 bg-opacity-5 py-14 text-justify">
+          <p class=" font-agrandir font-bold text-[#f9f6e8] text-[16px] sm:text-[21px]">
             Recent Highschool graduate in the field of Physics, Chemistry, and Mathematics, currently a trainee at
             SheCanCode Software Engineering Program. My ultimate goal is to become a proficient software architect. In
             five
@@ -69,116 +71,128 @@
       </div>
     </div>
 
+    <hr class="hidden h-[300px] w-[3px] bg-[#b8b5a2] mx-[20px] sm:flex">
 
-    <div class="w-2/3 h-[93%] px-24 z-10 relative border-l-[3px] border-[#FEFAE0]">
-      <div class="grid grid-rows-2 h-[90%]">
-        <div class="text-[60px] font-agrandir font-bold mb-14 grid grid-rows-2">
-          <div>ABOUT</div>
-          <div>ME</div>
-        </div>
-        <div class="text-[#fefae0] font-agrandir">
-          <span class="text-[20px] font-bold"> I Envision, I Code, I Create:</span><br><span
-            class="text-[13px] italic font-bold"> Paving the Path for Modern Software<br>
-            Development.
+    <div class="z-10 sm:w-1/2">
+      <div class="">
+        <h1 class="text-[25px] sm:text-[30px] md:text-[40px] font-agrandir font-bold mb-6 text-[#272727]">ABOUT ME</h1>
+        <div class="text-[#272727] font-agrandir">
+          <span class="text-[25px] font-bold">
+            I Envision, I Code, I Create:
+          </span><br><br>
+          <span class="text-[17px] italic font-bold">
+            Paving the Path for Modern Software Development: Exploring Cutting-Edge Technologies, Agile Methodologies, and Industry Trends to Drive Innovation and Success in a Rapidly Evolving Digital Landscape..
+          </span>
         </div>
       </div>
-      <a href="cv.pdf" target="_blank"><button
-          class=" text-[#fefae0] px-[10%] py-[5%] font-agrandir z-10 relative font-bold text-[80%] rounded-full border-[3px] border-[#fefae0] hover:bg-[#fefae0] hover:text-[#bba798] hover:px-14 hover:py-4 transition-all duration-300 hover:ease-in-out">
-          TAKE A LOOK AT MY CV
-        </button></a>
+      <a href="cv.pdf" target="_blank" class="flex mt-[15px] w-fit text-[#272727] px-[20px] py-[10px] font-agrandir z-10 relative font-bold text-[80%] rounded-full border-[3px] border-[#272727] hover:bg-[#272727] hover:text-[white] transition-all duration-300 hover:ease-in-out">TAKE A LOOK AT MY CV</a>
 
     </div>
-
-
   </div>
 
-  </div>
-  <div class=" p-10 text-center z-10 relative mt-24" id="skills">
-    <h1 class="font-agrandir text-[66px] font-extrabold mb-28">SKILLS</h1>
+  <div class="py-11 pt-[110px] text-center z-10 relative" id="skills">
+    <h1 class="font-agrandir text-[46px] font-extrabold mb-10">SKILLS</h1>
 
-    <div class="grid lg:grid-cols-3 grid-cols-1 gap-x-16 font-agrandir font-bold text-[15px] ml-10 shadow-2xl rounded-2xl p-7">
-      <div class="w-[1/3] lg:ml-11">
-        <h2 class="text-[42px] mb-28 font-bold ">HTML</h2>
-        <p>I have a solid foundation in HTML<br> and can create simple web pages.</p>
-        <hr class="border-[#FEFAE0] mt-12 w-[100%] -ml-[10%]">
-        <hr class="rotate-90 border-[#FEFAE0] ml-[70%] w-[60%] -mt-40">
+    <div class="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-y-[30px] gap-x-[30px] items-center font-agrandir bg-white text-[#272727] font-bold text-[15px] w-[90%] mx-auto shadow-2xl rounded-2xl py-[50px] px-[20px]">
+      <div class="">
+        <h2 class="text-[25px] font-bold mb-[10px]">HTML</h2>
+        <p>I have a solid foundation in HTML and can create simple web pages.</p>
+      </div>
+      <div class="border-y-[1px] border-t-[#27272755] border-b-[#27272755] md:border-y-0 py-[15px] w-[90%] mx-auto md:py-0 md:w-full">
+        <h2 class="text-[25px]  font-bold mb-[10px]">CSS</h2>
+        <p>I know how to use CSS to create simple and attractive web designs.</p>
       </div>
 
-      <div class="w-[1/3]">
-        <h2 class="text-[42px] mb-28  font-bold">CSS</h2>
-        <p>I know how to use CSS to<br> create simple and attractive web designs.</p>
-        <hr class="border-[#FEFAE0] mt-12 w-[100%]  -ml-[10%]">
-        <hr class="rotate-90 border-[#FEFAE0] ml-[70%] w-[60%] -mt-40">
+      <div class="">
+        <h2 class="text-[25px] font-bold mb-[10px]">JAVASCRIPT</h2>
+        <p>I have a solid understanding of JavaScript fundamentals and can create interactive web applications.</p>
       </div>
-
-      <div class="w-[1/3px]">
-        <h2 class="text-[42px] mb-20 font-bold">JAVASCRIPT</h2>
-        <p>I have a solid understanding of<br> JavaScript fundamentals and can<br> create interactive web<br>
-          applications.</p>
-        <hr class="border-[#FEFAE0] mt-9 w-[110%] -ml-[10%]">
-      </div>
+      
     </div>
 
     <a href="https://www.linkedin.com/in/mutabazi-innocente-2b3a912aa/" target="_blank"> <button
-        class=" mt-12 text-[#fefae0] px-14 py-3 font-agrandir font-bold text-[13px] rounded-full border-[3px] border-[#fefae0] hover:bg-[#fefae0] hover:text-[#bba798] hover:px-20 hover:py-4 transition duration-300 ease-in-out">
+        class=" mt-12 text-[#fefae0] px-14 py-3 font-agrandir font-bold text-[13px] rounded-full border-[3px] border-[#fefae0] hover:bg-[#fefae0] hover:text-[#bba798] transition duration-300 ease-in-out">
         LEARN MORE
       </button></a>
   </div>
 
-  <div class="p-10 text-center z-10 relative" id="projects">
-    <h1 class="text-[66px] font-agrandir mb-6 font-extrabold">PROJECTS</h1>
+  <div class="py-11 text-center z-10 relative pt-[110px]" id="projects">
+    <h1 class="font-agrandir text-[46px] font-extrabold mb-10">PROJECTS</h1>
 
-    <div class="grid grid-cols-1 px-24 justify-between lg:grid-cols-3 gap-1 shadow-2xl w-full py-3 rounded-2xl">
-      <div class=" lg:p-8 lg:w-[1/3] w-full  text-center">
-        <img src="Screenshot 2024-03-17 191612.png" alt="BR Architect" class="xl:ml-6 lg:w-[281px] w-full h-[80%]  lg:h-[281px] rounded-[50px] mb-4">
-        <p class="text-[16px] font-agrandir font-bold">BR ARCHITECT</p>
-        <p class="text-[#FEFAE0] text-[14px]">I tried recreating the Architect Template from W3School.</p>
+    <div class="grid grid-cols-1 justify-between sm:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[25px] py-[35px] rounded-2xl w-[90%] mx-auto">
+      <div class="text-center px-7 sm:px-10 md:px-16 bg-[white] py-[30px] shadow-2xl text-[#272727] rounded-[10px] relative transition-[.5s] bottom-0 hover:bottom-[20px]">
+        <img src="Screenshot 2024-03-17 191612.png" alt="BR Architect" class="w-[200px] h-[200px] flex mx-auto rounded-[10px] mb-4 overflow-hidden border">
+        <p class="text-[20px] font-agrandir font-bold mb-[10px]">BR ARCHITECT</p>
+        <p class="text-[17px]">I tried recreating the Architect Template from W3School.</p>
       </div>
-      <div class=" lg:p-8 lg:w-[1/3] w-full lg:border-x-2 lg:border-y-0 border-y-2 border-[#FEFAE0]">
-        <img src="Screenshot 2024-03-17 191929.png" alt="Rock Paper Scissors"
-          class="lg:w-[281px] xl:ml-8 lg:h-[281px] rounded-[50px] mb-4 h-[80%] w-full">
-        <p class="text-[16px] font-agrandir font-bold">ROCK-PAPER-SCISSORS</p>
-        <p class="text-[#FEFAE0] text-[14px]">Created a simple rock paper scissors game using basic JavaScript.</p>
+      <div class="text-center px-7 sm:px-10 md:px-16 bg-[white] py-[30px] shadow-2xl text-[#272727] rounded-[10px] relative transition-[.5s] bottom-0 hover:bottom-[20px]">
+        <img src="Screenshot 2024-03-17 191929.png" alt="Rock Paper Scissors" class="w-[200px] h-[200px] flex mx-auto rounded-[10px] mb-4 overflow-hidden border">
+        <p class="text-[20px] font-agrandir font-bold mb-[10px]">Rock Paper Scissors</p>
+        <p class="text-[17px]">Created a simple rock paper scissors game using basic JavaScript.</p>
       </div>
-      <div class=" lg:p-8 lg:w-[1/3] w-full text-center">
-        <img src="Screenshot 2024-03-17 192448.png" alt="BR Architect" class=" xl:ml-10 h-[80%] w-full lg:w-[281px] lg:h-[281px] rounded-[50px] mb-4">
-        <p class="text-[16px] font-agrandir font-bold">AGE CALCULATOR</p>
-        <p class="text-[#FEFAE0] text-[14px]">Created a simple age calculator using basic JavaScript</p>
+      <div class="text-center px-7 sm:px-10 md:px-16 bg-[white] py-[30px] shadow-2xl text-[#272727] rounded-[10px] relative transition-[.5s] bottom-0 hover:bottom-[20px]">
+        <img src="Screenshot 2024-03-17 192448.png" alt="AGE CALCULATOR" class="w-[200px] h-[200px] flex mx-auto rounded-[10px] mb-4 overflow-hidden border">
+        <p class="text-[20px] font-agrandir font-bold mb-[10px]">AGE CALCULATOR</p>
+        <p class="text-[17px]">Created a simple age calculator using basic JavaScript</p>
       </div>
 
     </div>
     <a href="https://github.com/innocentemutabazi?tab=repositories" target="_blank"><button
-        class="mt-12 lg:w-[600px] py-3 lg:hover:w-[700px] hover:bg-[#FEFAE0] border-[#FEFAE0] border-[3px] text-[#FEFAE0] font-bold text- rounded-full hover:py-4 hover:text-[#A8927C] transition-all duration-300 hover:ease-linear">
+        class="mt-8 sm:mt-12 py-3 px-[30px] sm:px-[50px] hover:bg-[#FEFAE0] border-[3px] hover:scale-[1.1] text-[#FEFAE0] font-bold text- rounded-full hover:text-[#A8927C] hover:border-[#A8927C] transition-all duration-300">
         FIND MORE OF MY PROJECTS
       </button></a>
   </div>
-  <div class="mt-56 mb-24 flex " id="contact">
-    <div class="inline">
-      <div class="relative float-left flex justify-center align-middle ml-[180px] mr-64 w-[60%]">
-        <div class="relative z-10 ">
-          <p class=" font-agrandir font-[1000] text-[#FEFAE0] text-[48px] h-[330] ">
-            Reach &#xA0;&#xA0;out&#xA0;&#xA0; to&#xA0;&#xA0; me<br>and&#xA0;&#xA0;&#xA0;&#xA0; let’s&#xA0;&#xA0;&#xA0;
-            create<br>something<br>impactful together!
-          </p>
-        </div>
+
+  <div class="py-[60px] items-center flex flex-col sm:flex-row justify-center bg-white text-[#272727] px-[20px] sm:px-0 gap-y-3 sm:gap-y-0" id="contact">
+    <p class="max-w-[100%] sm:max-w-[45%] md:max-w-[35%] lg:max-w-[25%] font-agrandir font-[1000] text-[21px] text-center sm:text-left sm:text-[27px]">
+      Reach out to me and let’s
+      create something impactful together!
+    </p>
+    <hr class="h-[300px] bg-[#2727277c] w-[3px] mx-[5px] sm:mx-[45px] sm:flex hidden">
+    <div class="z-10 relative">
+      <br>
+      <h2 class="text-[17px] sm:text-[20px] font-agrandir font-extrabold mb-[30px] text-center">CONTACT ME VIA:</h2>
+      <div class="flex gap-x-4">
+        <a href="https://github.com/innocentemutabazi" class="text-[27px] sm:text-[35px] relative transition bottom-0 hover:text-[#9b9676]"><i
+            class="fa-brands fa-github fa-bounce"></i></a>
+        <a href="mailto:innocentemutabazi@gmail.com" class="text-[27px] sm:text-[35px] relative transition bottom-0 hover:text-[#9b9676]"><i
+            class="fa-regular fa-envelope fa-bounce"></i></a>
+        <a href="https://www.instagram.com/cherryxcolaa__/" class="text-[27px] sm:text-[35px] relative transition bottom-0 hover:text-[#9b9676]"><i
+            class="fa-brands fa-instagram fa-bounce"></i></a>
+        <a href="https://twitter.com/gaella_m" class="text-[27px] sm:text-[35px] relative transition bottom-0 hover:text-[#9b9676]"> <i class="fa-brands fa-x-twitter fa-bounce"></i></a>
+        <a href="https://t.me/mutabaziinnocente" class="text-[27px] sm:text-[35px] relative transition bottom-0 hover:text-[#9b9676]"><i class="fa-brands fa-telegram fa-bounce"></i>
+
       </div>
-    </div>
-    <div class=" h-[380px] -mt-4 p-5 px-24 z-10 relative float-right border-l-[3px] border-[#FEFAE0] -ml-40">
-      <h2 class="text-[29px] font-agrandir font-extrabold mb-14 ml-8 mt-8 ">CONTACT ME VIA:</h2>
-      <br>
-      <br>
-      <a href="https://github.com/innocentemutabazi" class="hover:text-[60px]"><i
-          class="fa-brands fa-github fa-bounce text-[40px] mr-10"></i></a>
-      <a href="mailto:innocentemutabazi@gmail.com"><i
-          class="fa-regular fa-envelope fa-bounce text-[40px] mr-10"></i></a>
-      <a href="https://www.instagram.com/cherryxcolaa__/"><i
-          class="fa-brands fa-instagram fa-bounce text-[40px] mr-10"></i></a>
-      <a href="https://twitter.com/gaella_m"> <i class="fa-brands fa-x-twitter fa-bounce text-[40px] mr-10"></i></a>
-      <a href="https://t.me/mutabaziinnocente"><i class="fa-brands fa-telegram fa-bounce text-[40px] mr-10"></i>
     </div>
   </div>
   </div>
 
+  <script>
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("header").style.background = "white";
+        document.getElementById("header").classList.color = "#272727";
+        document.getElementById("header").classList.add("text-[#272727]");
+        document.getElementById("header").classList.remove("text-[#FEFAE0]");
+        document.getElementById("header").classList.add("shadow-md");
+      } else {
+        document.getElementById("header").style.background = "transparent";
+        document.getElementById("header").classList.remove("text-[#272727]");
+        document.getElementById("header").classList.add("text-[#FEFAE0]");
+        document.getElementById("header").classList.remove("shadow-md");
+      }
+    }
+
+    function showNav() {
+      document.getElementById("myNav").style.left = "0";
+    }
+
+    function hideNav() {
+      document.getElementById("myNav").style.left = "-270px";
+    }
+  </script>
 </body>
 
 </html>
