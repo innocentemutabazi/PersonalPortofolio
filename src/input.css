@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.myNav {
+  @apply fixed;
+  @apply md:relative; 
+  @apply w-[250px]; 
+  @apply md:w-fit; 
+  @apply overflow-y-auto;
+  @apply top-0 -left-[275px] md:left-0 h-full md:h-fit bg-white md:bg-transparent shadow-lg md:shadow-none flex-col md:flex-row items-start justify-start px-[5px] py-[45px] md:py-0 md:px-0 flex uppercase font-bold font-agrandir z-20 md:items-center;
+  @apply transition-all;
+}
+
+@media (max-width: 767px) {
+  .myNav .viewIn {
+    @apply left-0;
+  }
+}
